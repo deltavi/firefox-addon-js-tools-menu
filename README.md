@@ -1,1 +1,1 @@
-# firefox-addon-js-tools-menu
+# Firefox Addon - JSTools Menù
