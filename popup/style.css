@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding: 0;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+}
+
+#menu {
+    padding: 2px;
+}
+
+.emptyList {
+    color: gray;
+    text-align: center
+}
+
+.button {
+    padding: 1px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #99CCFF;
+}
+
+.options {
+    padding: 2px 10px !important;
+    border-top: solid 1px lightgray;
+    color: blue;
+    padding: 1px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #EEE;
+}
+
+.options:hover {
+    text-decoration: underline;
+}

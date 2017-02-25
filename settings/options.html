@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<form>
+    <fieldset>
+        <legend>Options</legend>
+        <div>
+            <div class="newScriptName">Menu name:</div>
+            <input type="text" style="width: 100%;" id="scriptName"><br/>
+            <div class="newScriptBody">JavaScript:</div>
+            <textarea style="width: 100%;" id="scriptContent"></textarea>
+            <div class="addBar"><span id="add" class="buttonAdd" title="Add"></span></div>
+        </div>
+        <div id="scripts-container">
+            <legend>Scripts:</legend>
+            <div id="emptyList">
+                <div class="emptyListBox">
+                    Empty list
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script src="options.js"></script>
+</body>
+</html>
