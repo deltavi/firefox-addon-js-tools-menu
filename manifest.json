@@ -1,8 +1,8 @@
 {
-  "description": "Firefox Webextensions - JSTools Menù",
+  "description": "Firefox Webextensions - JSTools Menu",
   "manifest_version": 2,
-  "name": "JSTools Menù",
-  "version": "1.0",
+  "name": "JSTools Menu",
+  "version": "1.1",
   "homepage_url": "http://www.vincenzodevivo.com",
   "icons": {
     "16": "icons/btn_magic_hat_js.16x16.png",
@@ -15,7 +15,7 @@
   },
   "browser_action": {
     "default_icon": "icons/btn_magic_hat_js.32x32.png",
-    "default_title": "JSTools Menù",
+    "default_title": "JSTools Menu",
     "default_popup": "popup/menu.html"
   },
   "options_ui": {

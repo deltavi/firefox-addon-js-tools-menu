@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<form>
-    <fieldset>
-        <legend>Options</legend>
-        <div>
-            <div class="newScriptName">Menu name:</div>
-            <input type="text" style="width: 100%;" id="scriptName"><br/>
-            <div class="newScriptBody">JavaScript:</div>
-            <textarea style="width: 100%;" id="scriptContent"></textarea>
-            <div class="addBar"><span id="add" class="buttonAdd" title="Add"></span></div>
-        </div>
-        <div id="scripts-container">
-            <legend>Scripts:</legend>
-            <div id="emptyList">
-                <div class="emptyListBox">
-                    Empty list
+    <form>
+        <fieldset>
+            <legend>Options</legend>
+            <div>
+                <div class="newScriptName">Menu name:</div>
+                <input type="text" style="width: 100%;" id="scriptName"><br/>
+                <div class="newScriptBody">JavaScript:</div>
+                <textarea style="width: 100%;" id="scriptContent"></textarea>
+                <div class="addBar"><span id="add" class="buttonAdd" title="Add"></span></div>
+            </div>
+            <div class="suggestions">
+                You can also add one of the built-in menu <span id="openExamplesBtn">examples</span>
+                <div id="examplesBox">
+                    <div class="examplesBar"><b>Examples:</b><img id="hideExamplesBtn" src="icons/btn_circle_cancel.16x16.png"/></div>
+                    <span class="addExample" id="contentEditableMenu">Make page content editable</span>
+                    <span class="addExample" id="showCalcMenu">Show calculator</span>
                 </div>
             </div>
-        </div>
-    </fieldset>
-</form>
+            <div id="scripts-container">
+                <legend>Scripts:</legend>
+                <div id="emptyList">
+                    <div class="emptyListBox">
+                        Empty list
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
 
-<script src="options.js"></script>
+    <script src="options.js"></script>
 </body>
+
 </html>

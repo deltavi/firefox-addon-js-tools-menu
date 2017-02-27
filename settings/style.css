@@ -32,7 +32,6 @@ input, textarea, button {
   padding: 4px;
 }
 
-
 input, textarea {
   font-family: sans-serif;
 }
@@ -89,73 +88,128 @@ p {
   height: 24px;
 }
 
-.buttonAdd{
-    background: url(icons/btn_circle_plus.24x24.png);
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    float: right;
+.buttonAdd {
+  background: url(icons/btn_circle_plus.24x24.png);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  float: right;
 }
 
-.buttonUpdate{
-    background: url(icons/btn_circle_ok.24x24.png);
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    float: right;
+.buttonUpdate {
+  background: url(icons/btn_circle_ok.24x24.png);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  float: right;
 }
 
-.buttonDelete{
-    background: url(icons/btn_circle_recycle_bin.24x24.png);
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    float: right;
+.buttonDelete {
+  background: url(icons/btn_circle_recycle_bin.24x24.png);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  float: right;
 }
 
-.buttonUndo{
-    background: url(icons/btn_circle_undo.24x24.png);
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    float: left;
+.buttonUndo {
+  background: url(icons/btn_circle_undo.24x24.png);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  float: left;
 }
 
-legend{
+legend {
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.newScriptBody, .newScriptName{
+.newScriptBody, .newScriptName {
   font-weight: bold;
 }
 
-.script:hover .editScript{
-    background: url(icons/btn_edit.16x16.png);
-    cursor: pointer;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    margin-left: 5px;
+.script:hover .editScript {
+  background: url(icons/btn_edit.16x16.png);
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  margin-left: 5px;
 }
 
-.editScript{
-    height: 16px;
-    width: 16px;
-    display: inline-block;
+.editScript {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
 }
 
 #emptyList {
-    text-align: center;
+  text-align: center;
 }
+
 .emptyListBox {
-    font-size: 13px;
-    color: gray;
-    text-align: center;
-    border: 1px solid gray;
-    background-color: white;
-    display: inline-block;
-    padding: 2px 10px;
+  font-size: 13px;
+  color: gray;
+  text-align: center;
+  border: 1px solid gray;
+  background-color: white;
+  display: inline-block;
+  padding: 2px 10px;
+}
+
+.suggestions {
+  background-color: #FFF088;
+  border: 1px solid gray;
+  color: black;
+  padding: 4px;
+  margin-top: 4px;
+}
+
+#openExamplesBtn {
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#openExamplesBtn:hover {
+  text-decoration: underline;
+}
+
+#examplesBox {
+  sfdisplay: none;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 4px 4px 12px 4px;
+  margin-top: 4px;
+}
+
+.examplesBar {
+  margin-bottom: 10px;
+}
+
+#hideExamplesBtn {
+  float: right;
+  cursor: pointer;
+  filter: grayscale(100%) opacity(60%);
+}
+
+#hideExamplesBtn:hover {
+  filter: none;
+}
+
+.addExample {
+  border: 1px solid gray;
+  padding: 5px 5px 5px 25px;
+  margin: 4px !important;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: azure;
+  background-image: url(icons/btn_circle_plus.16x16.png);
+  background-repeat: no-repeat;
+  background-position: 5px 3px;
+  user-select: none;
+  -moz-user-select: none;
 }

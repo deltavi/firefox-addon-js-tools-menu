@@ -2,6 +2,8 @@ var scriptNameItem = document.querySelector('#scriptName');
 var scriptContentItem = document.querySelector('#scriptContent');
 var scriptsContainer = document.querySelector('#scripts-container');
 var emptyListItem = document.querySelector('#emptyList');
+var openExamplesBtn = document.querySelector('#openExamplesBtn');
+var examplesBox = document.querySelector('#examplesBox');
 
 var addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', addScript);
@@ -38,9 +40,15 @@ function addScript() {
 }
 
 function storeScript(scriptName, scriptContent) {
-  var storingScript = browser.storage.local.set({ [scriptName]: scriptContent });
-  storingScript.then(() => {
-    displayScript(scriptName, scriptContent);
+  var gettingItem = browser.storage.local.get(scriptName);
+  gettingItem.then((result) => {
+    var objTest = Object.keys(result);
+    if (objTest.length < 1) {
+      var storingScript = browser.storage.local.set({ [scriptName]: scriptContent });
+      storingScript.then(() => {
+        displayScript(scriptName, scriptContent);
+      }, onError);
+    }
   }, onError);
 }
 
@@ -179,8 +187,28 @@ function truncateText(text, n, useWordBoundary) {
   if (spaceIndex < n / 2) {
     spaceIndex = subString.lastIndexOf('\n');
     if (spaceIndex < n / 2) {
-      return subString + "..."
+      return subString + '...';
     }
   }
   return (useWordBoundary ? subString.substr(0, spaceIndex) : subString) + "...";
 };
+
+
+openExamplesBtn.addEventListener('click', function () {
+  examplesBox.style.display = 'block';
+});
+
+examplesBox.addEventListener('click', function (e) {
+  if (e.target.id == 'hideExamplesBtn') {
+    examplesBox.style.display = 'none';
+  } if (e.target.classList.contains('addExample')) {
+    storeScript(e.target.textContent, buildInScripts[e.target.id]);
+  }
+});
+
+
+// Build-in Scripts
+var buildInScripts = {
+  contentEditableMenu: 'document.getElementsByTagName("html").item(0).contentEditable=true;',
+  showCalcMenu: 'alert("calc");'
+}
